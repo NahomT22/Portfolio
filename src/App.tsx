@@ -1,21 +1,22 @@
-import About from './components/About'
-import Contact from './components/Contact'
+import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
-import Projects from './components/Projects'
-import Skills from './components/Skills'
+import Nav from './components/Nav'
+import ScrollToTop from './components/ScrollToTop'
+import About from './pages/About'
+import Home from './pages/Home'
+import ProjectPage from './pages/ProjectPage'
 
 function App() {
   return (
-    <div className="min-h-screen bg-bg text-text">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+    <div className="flex min-h-screen flex-col bg-paper text-ink">
+      <ScrollToTop />
+      <Nav />
+      <main className="flex-1">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work/:slug" element={<ProjectPage />} />
+        </Routes>
       </main>
       <Footer />
     </div>

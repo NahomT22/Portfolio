@@ -1,54 +1,43 @@
 export const profile = {
-  name: 'Your Name',
-  role: 'Software Engineer',
-  tagline: 'I build fast, accessible web applications.',
-  bio: 'A short paragraph about who you are, what you work on, and what you care about as an engineer. Replace this with your own story.',
-  email: 'you@example.com',
+  name: 'Nahom Haile',
+  role: 'Architect & BIM Specialist',
+  location: 'Toronto, ON',
+  email: 'ntariku55@gmail.com',
+  tagline: 'Bridging architectural design with computational workflows.',
+  bio: [
+    'I am an internationally trained architect and a BIM Management student at George Brown College in Toronto. My work sits at the intersection of architectural design and computational workflow — modeling, coordinating, and visualizing buildings across the full delivery process.',
+    'I specialize in federated BIM coordination and parametric design, using Revit, Navisworks, and AutoCAD for modeling and clash resolution, and Dynamo for automated parametric design and facade optimization. On the visualization side, I work in Unreal Engine, Blender, and Adobe Creative Cloud to communicate design intent.',
+    'Alongside my architectural practice, I create architectural storytelling content on TikTok and YouTube — translating technical design and construction knowledge into content for a wider audience.',
+  ],
+  education: [
+    {
+      school: 'George Brown College',
+      program: 'BIM Management, Angelo DelZotto School of Construction Management',
+      location: 'Toronto, Canada',
+    },
+    {
+      school: 'Addis Ababa Science and Technology University',
+      program: 'Architecture',
+      location: 'Addis Ababa, Ethiopia',
+    },
+  ],
+  toolGroups: [
+    {
+      label: 'BIM & Coordination',
+      tools: ['Revit', 'Navisworks', 'AutoCAD', 'Autodesk Construction Cloud'],
+    },
+    {
+      label: 'Computational Design',
+      tools: ['Dynamo', 'Parametric Facade Optimization'],
+    },
+    {
+      label: 'Visualization',
+      tools: ['Unreal Engine', 'Blender', 'Lumion', 'Adobe Creative Cloud'],
+    },
+  ],
+  // Add your handles here — left blank so no placeholder links ship to production.
   social: {
-    github: 'https://github.com/your-username',
-    linkedin: 'https://linkedin.com/in/your-username',
+    tiktok: '',
+    youtube: '',
   },
 }
-
-export type Project = {
-  title: string
-  description: string
-  tags: string[]
-  link?: string
-  repo?: string
-}
-
-export const projects: Project[] = [
-  {
-    title: 'Project One',
-    description: 'A short description of the project and the problem it solves.',
-    tags: ['React', 'TypeScript', 'Vite'],
-    link: '#',
-    repo: '#',
-  },
-  {
-    title: 'Project Two',
-    description: 'A short description of the project and the problem it solves.',
-    tags: ['Node.js', 'Express', 'PostgreSQL'],
-    link: '#',
-    repo: '#',
-  },
-  {
-    title: 'Project Three',
-    description: 'A short description of the project and the problem it solves.',
-    tags: ['Python', 'Data'],
-    link: '#',
-    repo: '#',
-  },
-]
-
-export const skills = [
-  'TypeScript',
-  'React',
-  'Node.js',
-  'Python',
-  'SQL',
-  'Git',
-  'Tailwind CSS',
-  'REST APIs',
-]
