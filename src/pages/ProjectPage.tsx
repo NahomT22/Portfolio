@@ -6,15 +6,17 @@ import { getProject, projects, type Project } from '../data/projects'
 
 type GalleryItem = Project['gallery'][number]
 
-// Groups consecutive small drawings into a shared grid row, so a full-size
-// render can be followed by a lighter cluster of plans/sections/details.
+// Groups consecutive small drawings sharing a category tag into a shared
+// grid row, so a full-size render can be followed by labeled clusters of
+// plans, elevations, sections, etc.
 function groupGallery(gallery: GalleryItem[]) {
   const groups: GalleryItem[][] = []
   for (const item of gallery) {
     const size = item.size ?? 'large'
     const currentGroup = groups[groups.length - 1]
     const currentSize = currentGroup?.[0]?.size ?? 'large'
-    if (size === 'small' && currentGroup && currentSize === 'small') {
+    const currentTag = currentGroup?.[0]?.tag
+    if (size === 'small' && currentGroup && currentSize === 'small' && currentTag === item.tag) {
       currentGroup.push(item)
     } else {
       groups.push([item])
@@ -77,6 +79,19 @@ export default function ProjectPage() {
               <p className="text-xs tracking-wide text-muted uppercase">Software</p>
               <p className="mt-1 text-ink">{project.software.join(', ')}</p>
             </div>
+            <div>
+              <p className="text-xs tracking-wide text-muted uppercase">Categories</p>
+              <ul className="mt-2 flex flex-wrap gap-1.5">
+                {project.categories.map((cat) => (
+                  <li
+                    key={cat}
+                    className="rounded-full border border-line px-2.5 py-0.5 text-xs text-ink"
+                  >
+                    {cat}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </Reveal>
         </div>
       </div>
@@ -107,6 +122,9 @@ export default function ProjectPage() {
 
           return (
             <Reveal key={group[0].src} delay={i * 0.05}>
+              {group[0].tag && (
+                <p className="mb-4 text-sm tracking-wide text-muted uppercase">{group[0].tag}</p>
+              )}
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {group.map((image) => (
                   <div key={image.src}>

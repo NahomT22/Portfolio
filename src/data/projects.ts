@@ -25,13 +25,14 @@ export type Project = {
   title: string
   location: string
   category: 'Academic Project' | 'Professional Project'
+  categories: string[]
   building: string
   role: string
   software: string[]
   summary: string
   description: string
   cover: string
-  gallery: { src: string; caption: string; size?: 'large' | 'small' }[]
+  gallery: { src: string; caption: string; size?: 'large' | 'small'; tag?: string }[]
 }
 
 export const projects: Project[] = [
@@ -41,6 +42,14 @@ export const projects: Project[] = [
     title: 'Federated BIM Model Development',
     location: 'George Brown College',
     category: 'Academic Project',
+    categories: [
+      'Floor Plans',
+      'Elevations',
+      'Sections',
+      'Details',
+      'Clash Detection',
+      'MEP Systems',
+    ],
     building: '8-storey mixed-use apartment building',
     role: 'Modeling, form development & coordination, mechanical design',
     software: ['Revit', 'Autodesk Construction Cloud'],
@@ -55,15 +64,50 @@ export const projects: Project[] = [
         caption: 'Exterior render of the completed massing and envelope',
         size: 'large',
       },
-      { src: bimParkingP2, caption: 'Parking level 2 floor plan', size: 'small' },
-      { src: bimParkingP1, caption: 'Parking level 1 floor plan', size: 'small' },
-      { src: bimTypicalFloor, caption: 'Typical floor plan, 2nd–8th floor', size: 'small' },
-      { src: bim3rdFloorUnits, caption: 'Third-floor unit type plan', size: 'small' },
-      { src: bimElevationSouthNorth, caption: 'South and north elevations', size: 'small' },
-      { src: bimElevationEastWest, caption: 'East and west elevations', size: 'small' },
-      { src: bimSection1, caption: 'Building section 1', size: 'small' },
-      { src: bimSection2, caption: 'Building section 2, with sample units', size: 'small' },
-      { src: bimWallDetails, caption: 'Wall assembly details', size: 'small' },
+      {
+        src: bimParkingP2,
+        caption: 'Parking level 2 floor plan',
+        size: 'small',
+        tag: 'Floor Plans',
+      },
+      {
+        src: bimParkingP1,
+        caption: 'Parking level 1 floor plan',
+        size: 'small',
+        tag: 'Floor Plans',
+      },
+      {
+        src: bimTypicalFloor,
+        caption: 'Typical floor plan, 2nd–8th floor',
+        size: 'small',
+        tag: 'Floor Plans',
+      },
+      {
+        src: bim3rdFloorUnits,
+        caption: 'Third-floor unit type plan',
+        size: 'small',
+        tag: 'Floor Plans',
+      },
+      {
+        src: bimElevationSouthNorth,
+        caption: 'South and north elevations',
+        size: 'small',
+        tag: 'Elevations',
+      },
+      {
+        src: bimElevationEastWest,
+        caption: 'East and west elevations',
+        size: 'small',
+        tag: 'Elevations',
+      },
+      { src: bimSection1, caption: 'Building section 1', size: 'small', tag: 'Sections' },
+      {
+        src: bimSection2,
+        caption: 'Building section 2, with sample units',
+        size: 'small',
+        tag: 'Sections',
+      },
+      { src: bimWallDetails, caption: 'Wall assembly details', size: 'small', tag: 'Details' },
     ],
   },
   {
@@ -72,6 +116,7 @@ export const projects: Project[] = [
     title: 'Modelling & Coordinating MEP Systems',
     location: 'George Brown College',
     category: 'Academic Project',
+    categories: ['Plans', 'Elevation', 'Section', 'Details'],
     building: '4-storey mixed-use building',
     role: 'BIM modeling & coordination, clash detection',
     software: ['Revit'],
@@ -94,6 +139,7 @@ export const projects: Project[] = [
     title: 'Model Coordination & Clash Detection',
     location: 'George Brown College',
     category: 'Academic Project',
+    categories: ['Clashes', 'Report', '4D Simulation'],
     building: 'Mixed-use, 5-storey building',
     role: 'BIM Coordinator',
     software: ['Revit', 'Navisworks'],
@@ -112,17 +158,25 @@ export const projects: Project[] = [
         src: clashDetail1,
         caption: 'Clash detection: structural steel vs. equipment',
         size: 'small',
+        tag: 'Clashes',
       },
-      { src: clashDetail2, caption: 'Clash detection: duct routing through truss', size: 'small' },
+      {
+        src: clashDetail2,
+        caption: 'Clash detection: duct routing through truss',
+        size: 'small',
+        tag: 'Clashes',
+      },
       {
         src: clashDetail3,
         caption: 'Clash detection: mechanical clearance check',
         size: 'small',
+        tag: 'Clashes',
       },
       {
         src: clashDetail4,
         caption: 'Clash detection: coordination issue resolved',
         size: 'small',
+        tag: 'Clashes',
       },
     ],
   },
@@ -132,6 +186,14 @@ export const projects: Project[] = [
     title: 'Shift Apartments',
     location: 'Addis Ababa Science and Technology University',
     category: 'Academic Project',
+    categories: [
+      'Form Development',
+      'Floor Plans',
+      'Elevation',
+      'Section',
+      'Details',
+      'MEP Systems',
+    ],
     building: '11-storey apartment building, 1,300 sq.m',
     role: 'Designing, drafting, modelling, rendering',
     software: ['Revit', 'Lumion'],
@@ -146,7 +208,12 @@ export const projects: Project[] = [
         caption: 'Exterior render of the shifted tower massing',
         size: 'large',
       },
-      { src: shiftDiagram, caption: 'Shifted floor-plate diagram', size: 'small' },
+      {
+        src: shiftDiagram,
+        caption: 'Shifted floor-plate diagram',
+        size: 'small',
+        tag: 'Form Development',
+      },
     ],
   },
   {
@@ -155,6 +222,14 @@ export const projects: Project[] = [
     title: 'The 4 Points Building',
     location: 'Addis Ababa, Ethiopia',
     category: 'Professional Project',
+    categories: [
+      'Form Development',
+      'Floor Plans',
+      'Elevation',
+      'Section',
+      'Details',
+      'MEP Systems',
+    ],
     building: '22-storey mixed-use tower, ~2,000 sq.m, 136 apartments',
     role: 'Drafter, modeller, rendering',
     software: ['Revit', 'AutoCAD', 'Lumion'],
@@ -169,6 +244,7 @@ export const projects: Project[] = [
         src: fourPointsDiagram,
         caption: 'Tower massing and void concept diagram',
         size: 'small',
+        tag: 'Form Development',
       },
     ],
   },

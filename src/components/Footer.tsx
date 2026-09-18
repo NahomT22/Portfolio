@@ -1,3 +1,4 @@
+import LinkedInIcon from './LinkedInIcon'
 import { profile } from '../data/profile'
 
 export default function Footer() {
@@ -12,10 +13,19 @@ export default function Footer() {
           </p>
           <a
             href={`mailto:${profile.email}`}
-            className="mt-3 inline-block text-sm text-muted underline decoration-line underline-offset-4 transition-colors hover:text-clay"
+            className="mt-3 block text-sm text-muted underline decoration-line underline-offset-4 transition-colors hover:text-clay"
           >
             {profile.email}
           </a>
+          {profile.social.linkedin && (
+            <a
+              href={profile.social.linkedin}
+              aria-label="LinkedIn"
+              className="mt-3 inline-flex items-center justify-center rounded-sm opacity-80 transition-opacity hover:opacity-100"
+            >
+              <LinkedInIcon className="h-6 w-6" />
+            </a>
+          )}
         </div>
 
         <div className="flex flex-col gap-2 text-sm text-muted md:items-end">

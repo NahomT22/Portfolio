@@ -39,8 +39,9 @@ export const profile = {
       tools: ['Photoshop', 'Illustrator', 'InDesign'],
     },
   ],
-  // Add your handles here — left blank so no placeholder links ship to production.
+  // Add your handles/URLs here — left blank so no placeholder links ship to production.
   social: {
+    linkedin: '',
     tiktok: '',
     youtube: '',
   },
