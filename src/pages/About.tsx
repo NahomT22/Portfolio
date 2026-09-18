@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal'
+import SoftwareSkills from '../components/SoftwareSkills'
 import { profile } from '../data/profile'
 
 export default function About() {
@@ -20,34 +21,22 @@ export default function About() {
           ))}
         </Reveal>
 
-        <Reveal delay={0.2} className="space-y-10">
-          <div>
-            <h2 className="font-serif text-xl text-ink">Education</h2>
-            <ul className="mt-4 space-y-4 border-t border-line pt-4">
-              {profile.education.map((edu) => (
-                <li key={edu.school} className="text-sm">
-                  <p className="font-medium text-ink">{edu.school}</p>
-                  <p className="mt-1 text-muted">{edu.program}</p>
-                  <p className="text-muted">{edu.location}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="font-serif text-xl text-ink">Tools</h2>
-            <div className="mt-4 space-y-4 border-t border-line pt-4">
-              {profile.toolGroups.map((group) => (
-                <div key={group.label}>
-                  <p className="text-xs tracking-wide text-muted uppercase">
-                    {group.label}
-                  </p>
-                  <p className="mt-1 text-sm text-ink">{group.tools.join(', ')}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        <Reveal delay={0.2}>
+          <h2 className="font-serif text-xl text-ink">Education</h2>
+          <ul className="mt-4 space-y-4 border-t border-line pt-4">
+            {profile.education.map((edu) => (
+              <li key={edu.school} className="text-sm">
+                <p className="font-medium text-ink">{edu.school}</p>
+                <p className="mt-1 text-muted">{edu.program}</p>
+                <p className="text-muted">{edu.location}</p>
+              </li>
+            ))}
+          </ul>
         </Reveal>
+      </div>
+
+      <div className="mt-24">
+        <SoftwareSkills />
       </div>
     </div>
   )

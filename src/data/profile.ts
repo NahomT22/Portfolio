@@ -23,16 +23,20 @@ export const profile = {
   ],
   toolGroups: [
     {
-      label: 'BIM & Coordination',
-      tools: ['Revit', 'Navisworks', 'AutoCAD', 'Autodesk Construction Cloud'],
+      label: 'BIM & CAD',
+      tools: ['Revit', 'Autodesk Navisworks', 'AutoCAD', 'Civil 3D', 'Autodesk Construction Cloud'],
     },
     {
       label: 'Computational Design',
-      tools: ['Dynamo', 'Parametric Facade Optimization'],
+      tools: ['Dynamo'],
     },
     {
-      label: 'Visualization',
-      tools: ['Unreal Engine', 'Blender', 'Lumion', 'Adobe Creative Cloud'],
+      label: 'Rendering & Visualization',
+      tools: ['Lumion', 'Enscape', 'Twinmotion', 'Unreal Engine', 'Blender'],
+    },
+    {
+      label: 'Adobe Creative Suite',
+      tools: ['Photoshop', 'Illustrator', 'InDesign'],
     },
   ],
   // Add your handles here — left blank so no placeholder links ship to production.
