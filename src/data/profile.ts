@@ -41,7 +41,7 @@ export const profile = {
   ],
   // Add your handles/URLs here — left blank so no placeholder links ship to production.
   social: {
-    linkedin: '',
+    linkedin: 'https://www.linkedin.com/in/nahomhaile/',
     tiktok: '',
     youtube: '',
   },
