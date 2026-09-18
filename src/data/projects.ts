@@ -4,10 +4,15 @@ import clashDetail3 from '../assets/projects/clash-detection-detail-3.jpg'
 import clashDetail4 from '../assets/projects/clash-detection-detail-4.jpg'
 import clashHero from '../assets/projects/clash-detection-hero.jpg'
 import bim3rdFloorUnits from '../assets/projects/federated-bim-3rd-floor-units.jpg'
+import bimElevationEastWest from '../assets/projects/federated-bim-elevation-east-west.jpg'
+import bimElevationSouthNorth from '../assets/projects/federated-bim-elevation-south-north.jpg'
 import bimHero from '../assets/projects/federated-bim-hero.jpg'
 import bimParkingP1 from '../assets/projects/federated-bim-parking-p1.jpg'
 import bimParkingP2 from '../assets/projects/federated-bim-parking-p2.jpg'
+import bimSection1 from '../assets/projects/federated-bim-section-1.jpg'
+import bimSection2 from '../assets/projects/federated-bim-section-2.jpg'
 import bimTypicalFloor from '../assets/projects/federated-bim-typical-floor.jpg'
+import bimWallDetails from '../assets/projects/federated-bim-wall-details.jpg'
 import fourPointsDiagram from '../assets/projects/four-points-diagram.jpg'
 import fourPointsHero from '../assets/projects/four-points-hero.jpg'
 import mepHero from '../assets/projects/mep-coordination-hero.jpg'
@@ -54,6 +59,11 @@ export const projects: Project[] = [
       { src: bimParkingP1, caption: 'Parking level 1 floor plan', size: 'small' },
       { src: bimTypicalFloor, caption: 'Typical floor plan, 2nd–8th floor', size: 'small' },
       { src: bim3rdFloorUnits, caption: 'Third-floor unit type plan', size: 'small' },
+      { src: bimElevationSouthNorth, caption: 'South and north elevations', size: 'small' },
+      { src: bimElevationEastWest, caption: 'East and west elevations', size: 'small' },
+      { src: bimSection1, caption: 'Building section 1', size: 'small' },
+      { src: bimSection2, caption: 'Building section 2, with sample units', size: 'small' },
+      { src: bimWallDetails, caption: 'Wall assembly details', size: 'small' },
     ],
   },
   {

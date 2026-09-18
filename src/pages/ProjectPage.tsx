@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
+import Lightbox from '../components/Lightbox'
 import Reveal from '../components/Reveal'
 import { getProject, projects, type Project } from '../data/projects'
 
@@ -24,6 +26,7 @@ function groupGallery(gallery: GalleryItem[]) {
 export default function ProjectPage() {
   const { slug } = useParams()
   const project = getProject(slug ?? '')
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null)
 
   if (!project) return <Navigate to="/" replace />
 
@@ -86,11 +89,17 @@ export default function ProjectPage() {
             const image = group[0]
             return (
               <Reveal key={image.src} delay={i * 0.05}>
-                <img
-                  src={image.src}
-                  alt={image.caption}
-                  className="w-full rounded-sm object-cover"
-                />
+                <button
+                  type="button"
+                  onClick={() => setLightbox(image)}
+                  className="block w-full cursor-zoom-in"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.caption}
+                    className="w-full rounded-sm object-cover"
+                  />
+                </button>
                 <p className="mt-3 text-sm text-muted">{image.caption}</p>
               </Reveal>
             )
@@ -101,13 +110,17 @@ export default function ProjectPage() {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {group.map((image) => (
                   <div key={image.src}>
-                    <div className="flex min-h-72 items-center justify-center rounded-sm border border-line bg-paper p-4 sm:min-h-80">
+                    <button
+                      type="button"
+                      onClick={() => setLightbox(image)}
+                      className="flex min-h-72 w-full cursor-zoom-in items-center justify-center rounded-sm border border-line bg-paper p-4 sm:min-h-80"
+                    >
                       <img
                         src={image.src}
                         alt={image.caption}
                         className="max-h-72 w-auto object-contain sm:max-h-80"
                       />
-                    </div>
+                    </button>
                     <p className="mt-2 text-xs text-muted">{image.caption}</p>
                   </div>
                 ))}
@@ -133,6 +146,8 @@ export default function ProjectPage() {
           </span>
         </Link>
       </div>
+
+      <Lightbox image={lightbox} onClose={() => setLightbox(null)} />
     </div>
   )
 }

@@ -19,7 +19,7 @@ export default function Nav() {
   }, [open])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-paper/90 backdrop-blur-sm">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line/70 bg-paper">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
         <Link
           to="/"
