@@ -3,9 +3,7 @@ import clashDetail2 from '../assets/projects/clash-detection-detail-2.jpg'
 import clashDetail3 from '../assets/projects/clash-detection-detail-3.jpg'
 import clashDetail4 from '../assets/projects/clash-detection-detail-4.jpg'
 import clashHero from '../assets/projects/clash-detection-hero.jpg'
-import bimAxon from '../assets/projects/federated-bim-axon.jpg'
 import bimHero from '../assets/projects/federated-bim-hero.jpg'
-import bimPlan from '../assets/projects/federated-bim-plan.jpg'
 import fourPointsDiagram from '../assets/projects/four-points-diagram.jpg'
 import fourPointsHero from '../assets/projects/four-points-hero.jpg'
 import mepHero from '../assets/projects/mep-coordination-hero.jpg'
@@ -24,7 +22,7 @@ export type Project = {
   summary: string
   description: string
   cover: string
-  gallery: { src: string; caption: string }[]
+  gallery: { src: string; caption: string; size?: 'large' | 'small' }[]
 }
 
 export const projects: Project[] = [
@@ -43,9 +41,11 @@ export const projects: Project[] = [
       'Focused on developing a federated model through multidisciplinary coordination. Developed architectural plans and building envelope designs, coordinated multidisciplinary project progress, and contributed to the design and coordination of mechanical systems.',
     cover: bimHero,
     gallery: [
-      { src: bimHero, caption: 'Exterior render of the completed massing and envelope' },
-      { src: bimPlan, caption: 'Third-floor mechanical coordination plan' },
-      { src: bimAxon, caption: 'Federated structural and mechanical axonometric' },
+      {
+        src: bimHero,
+        caption: 'Exterior render of the completed massing and envelope',
+        size: 'large',
+      },
     ],
   },
   {
@@ -63,7 +63,11 @@ export const projects: Project[] = [
       'Focused on federated model coordination for a 4-storey mixed-use building. Coordinating three MEP disciplines within a tight floor-to-floor height required iterative clash resolution; resolved over 40 major clashes, improving constructability and achieving a conflict-free federated model by final submission.',
     cover: mepHero,
     gallery: [
-      { src: mepHero, caption: 'Coordinated mechanical, electrical & plumbing systems' },
+      {
+        src: mepHero,
+        caption: 'Coordinated mechanical, electrical & plumbing systems',
+        size: 'large',
+      },
     ],
   },
   {
@@ -81,11 +85,27 @@ export const projects: Project[] = [
       'As BIM Coordinator, authored the architectural Revit model, coordinated with structural and MEP sub-models, conducted Navisworks clash detection, and prepared the coordination issue log for a mixed-use 5-storey building.',
     cover: clashHero,
     gallery: [
-      { src: clashHero, caption: 'Composite structural, architectural & MEP model' },
-      { src: clashDetail1, caption: 'Clash detection: structural steel vs. equipment' },
-      { src: clashDetail2, caption: 'Clash detection: duct routing through truss' },
-      { src: clashDetail3, caption: 'Clash detection: mechanical clearance check' },
-      { src: clashDetail4, caption: 'Clash detection: coordination issue resolved' },
+      {
+        src: clashHero,
+        caption: 'Composite structural, architectural & MEP model',
+        size: 'large',
+      },
+      {
+        src: clashDetail1,
+        caption: 'Clash detection: structural steel vs. equipment',
+        size: 'small',
+      },
+      { src: clashDetail2, caption: 'Clash detection: duct routing through truss', size: 'small' },
+      {
+        src: clashDetail3,
+        caption: 'Clash detection: mechanical clearance check',
+        size: 'small',
+      },
+      {
+        src: clashDetail4,
+        caption: 'Clash detection: coordination issue resolved',
+        size: 'small',
+      },
     ],
   },
   {
@@ -103,8 +123,12 @@ export const projects: Project[] = [
       'Designed for a commercially active urban context, the building adopts a mixed-use program organized around a podium-neck-tower concept. The form is achieved through a series of shifted floor plates, lending the building both a distinctive and dynamic interior layout. The lower three floors accommodate commercial uses, transitioning to residential units above, and culminating in a luxury penthouse at the uppermost level.',
     cover: shiftHero,
     gallery: [
-      { src: shiftHero, caption: 'Exterior render of the shifted tower massing' },
-      { src: shiftDiagram, caption: 'Shifted floor-plate diagram' },
+      {
+        src: shiftHero,
+        caption: 'Exterior render of the shifted tower massing',
+        size: 'large',
+      },
+      { src: shiftDiagram, caption: 'Shifted floor-plate diagram', size: 'small' },
     ],
   },
   {
@@ -122,8 +146,12 @@ export const projects: Project[] = [
       'Four residential towers are united by a central core apartment, with vertical voids carved into the mid-faces of the block to articulate each tower and introduce natural openings. Internally, these voids double as well-lit circulation corridors, connecting apartments and vertical movement.',
     cover: fourPointsHero,
     gallery: [
-      { src: fourPointsHero, caption: 'Street-level exterior render' },
-      { src: fourPointsDiagram, caption: 'Tower massing and void concept diagram' },
+      { src: fourPointsHero, caption: 'Street-level exterior render', size: 'large' },
+      {
+        src: fourPointsDiagram,
+        caption: 'Tower massing and void concept diagram',
+        size: 'small',
+      },
     ],
   },
 ]
