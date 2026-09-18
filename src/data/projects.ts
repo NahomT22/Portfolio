@@ -3,7 +3,11 @@ import clashDetail2 from '../assets/projects/clash-detection-detail-2.jpg'
 import clashDetail3 from '../assets/projects/clash-detection-detail-3.jpg'
 import clashDetail4 from '../assets/projects/clash-detection-detail-4.jpg'
 import clashHero from '../assets/projects/clash-detection-hero.jpg'
+import bim3rdFloorUnits from '../assets/projects/federated-bim-3rd-floor-units.jpg'
 import bimHero from '../assets/projects/federated-bim-hero.jpg'
+import bimParkingP1 from '../assets/projects/federated-bim-parking-p1.jpg'
+import bimParkingP2 from '../assets/projects/federated-bim-parking-p2.jpg'
+import bimTypicalFloor from '../assets/projects/federated-bim-typical-floor.jpg'
 import fourPointsDiagram from '../assets/projects/four-points-diagram.jpg'
 import fourPointsHero from '../assets/projects/four-points-hero.jpg'
 import mepHero from '../assets/projects/mep-coordination-hero.jpg'
@@ -46,6 +50,10 @@ export const projects: Project[] = [
         caption: 'Exterior render of the completed massing and envelope',
         size: 'large',
       },
+      { src: bimParkingP2, caption: 'Parking level 2 floor plan', size: 'small' },
+      { src: bimParkingP1, caption: 'Parking level 1 floor plan', size: 'small' },
+      { src: bimTypicalFloor, caption: 'Typical floor plan, 2nd–8th floor', size: 'small' },
+      { src: bim3rdFloorUnits, caption: 'Third-floor unit type plan', size: 'small' },
     ],
   },
   {

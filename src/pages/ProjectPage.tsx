@@ -98,14 +98,14 @@ export default function ProjectPage() {
 
           return (
             <Reveal key={group[0].src} delay={i * 0.05}>
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 {group.map((image) => (
                   <div key={image.src}>
-                    <div className="flex min-h-64 items-center justify-center rounded-sm border border-line bg-paper p-4">
+                    <div className="flex min-h-72 items-center justify-center rounded-sm border border-line bg-paper p-4 sm:min-h-80">
                       <img
                         src={image.src}
                         alt={image.caption}
-                        className="max-h-64 w-auto object-contain"
+                        className="max-h-72 w-auto object-contain sm:max-h-80"
                       />
                     </div>
                     <p className="mt-2 text-xs text-muted">{image.caption}</p>
