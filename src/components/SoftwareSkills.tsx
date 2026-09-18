@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import SoftwareIconBadge from './SoftwareIconBadge'
 import { profile } from '../data/profile'
 
 export default function SoftwareSkills() {
@@ -19,8 +20,9 @@ export default function SoftwareSkills() {
                 {group.tools.map((tool) => (
                   <li
                     key={tool}
-                    className="rounded-full border border-line px-3 py-1 text-sm text-ink"
+                    className="flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-sm text-ink"
                   >
+                    <SoftwareIconBadge name={tool} />
                     {tool}
                   </li>
                 ))}
