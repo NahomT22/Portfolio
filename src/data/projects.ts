@@ -15,7 +15,11 @@ import bimTypicalFloor from '../assets/projects/federated-bim-typical-floor.jpg'
 import bimWallDetails from '../assets/projects/federated-bim-wall-details.jpg'
 import fourPointsDiagram from '../assets/projects/four-points-diagram.jpg'
 import fourPointsHero from '../assets/projects/four-points-hero.jpg'
-import mepHero from '../assets/projects/mep-coordination-hero.jpg'
+import mepCover from '../assets/projects/mep-cover.jpg'
+import mepFloor1SpacePlan from '../assets/projects/mep-floor1-space-plan.jpg'
+import mepFloor2SpacePlan from '../assets/projects/mep-floor2-space-plan.jpg'
+import mepPlumbingSection from '../assets/projects/mep-plumbing-section.jpg'
+import mepSectionDetail from '../assets/projects/mep-section-detail.jpg'
 import shiftDiagram from '../assets/projects/shift-apartments-diagram.jpg'
 import shiftHero from '../assets/projects/shift-apartments-hero.jpg'
 
@@ -117,19 +121,43 @@ export const projects: Project[] = [
     location: 'George Brown College',
     category: 'Academic Project',
     categories: ['Plans', 'Elevation', 'Section', 'Details'],
-    building: '4-storey mixed-use building',
+    building: 'Elementary school, 2-storey building',
     role: 'BIM modeling & coordination, clash detection',
     software: ['Revit'],
     summary:
       'Coordinating three MEP disciplines within a tight floor-to-floor height, resolving over 40 major clashes to a conflict-free federated model.',
     description:
-      'Focused on federated model coordination for a 4-storey mixed-use building. Coordinating three MEP disciplines within a tight floor-to-floor height required iterative clash resolution; resolved over 40 major clashes, improving constructability and achieving a conflict-free federated model by final submission.',
-    cover: mepHero,
+      'Focused on federated model coordination for a 2-storey elementary school. Coordinating three MEP disciplines within a tight floor-to-floor height required iterative clash resolution; resolved over 40 major clashes, improving constructability and achieving a conflict-free federated model by final submission.',
+    cover: mepCover,
     gallery: [
       {
-        src: mepHero,
-        caption: 'Coordinated mechanical, electrical & plumbing systems',
+        src: mepCover,
+        caption: 'Cover sheet: drawing list and isometric MEP overview',
         size: 'large',
+      },
+      {
+        src: mepFloor1SpacePlan,
+        caption: 'First-floor mechanical space plan',
+        size: 'small',
+        tag: 'Plans',
+      },
+      {
+        src: mepFloor2SpacePlan,
+        caption: 'Second-floor space plan',
+        size: 'small',
+        tag: 'Plans',
+      },
+      {
+        src: mepPlumbingSection,
+        caption: 'Plumbing sections',
+        size: 'small',
+        tag: 'Section',
+      },
+      {
+        src: mepSectionDetail,
+        caption: 'Mechanical sections & details',
+        size: 'small',
+        tag: 'Details',
       },
     ],
   },
