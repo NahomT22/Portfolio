@@ -16,7 +16,9 @@ import bimWallDetails from '../assets/projects/federated-bim-wall-details.jpg'
 import fourPointsDiagram from '../assets/projects/four-points-diagram.jpg'
 import fourPointsHero from '../assets/projects/four-points-hero.jpg'
 import mepCover from '../assets/projects/mep-cover.jpg'
+import mepFloor1PlumbingPlan from '../assets/projects/mep-floor1-plumbing-plan.jpg'
 import mepFloor1SpacePlan from '../assets/projects/mep-floor1-space-plan.jpg'
+import mepFloor2PlumbingPlan from '../assets/projects/mep-floor2-plumbing-plan.jpg'
 import mepFloor2SpacePlan from '../assets/projects/mep-floor2-space-plan.jpg'
 import mepPlumbingSection from '../assets/projects/mep-plumbing-section.jpg'
 import mepSectionDetail from '../assets/projects/mep-section-detail.jpg'
@@ -120,7 +122,7 @@ export const projects: Project[] = [
     title: 'Modelling & Coordinating MEP Systems',
     location: 'George Brown College',
     category: 'Academic Project',
-    categories: ['Plans', 'Elevation', 'Section', 'Details'],
+    categories: ['Plans', 'Section', 'Details'],
     building: 'Elementary school, 2-storey building',
     role: 'BIM modeling & coordination, clash detection',
     software: ['Revit'],
@@ -144,6 +146,18 @@ export const projects: Project[] = [
       {
         src: mepFloor2SpacePlan,
         caption: 'Second-floor space plan',
+        size: 'small',
+        tag: 'Plans',
+      },
+      {
+        src: mepFloor1PlumbingPlan,
+        caption: 'First-floor plumbing plan',
+        size: 'small',
+        tag: 'Plans',
+      },
+      {
+        src: mepFloor2PlumbingPlan,
+        caption: 'Second-floor plumbing plan',
         size: 'small',
         tag: 'Plans',
       },
