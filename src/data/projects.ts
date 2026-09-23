@@ -1,8 +1,9 @@
-import clashDetail1 from '../assets/projects/clash-detection-detail-1.jpg'
-import clashDetail2 from '../assets/projects/clash-detection-detail-2.jpg'
-import clashDetail3 from '../assets/projects/clash-detection-detail-3.jpg'
-import clashDetail4 from '../assets/projects/clash-detection-detail-4.jpg'
+import clashArchitectural from '../assets/projects/clash-detection-architectural.jpg'
+import clashElectrical from '../assets/projects/clash-detection-electrical.jpg'
 import clashHero from '../assets/projects/clash-detection-hero.jpg'
+import clashMechanical from '../assets/projects/clash-detection-mechanical.jpg'
+import clashPlumbing from '../assets/projects/clash-detection-plumbing.jpg'
+import clashStructural from '../assets/projects/clash-detection-structural.jpg'
 import bim3rdFloorUnits from '../assets/projects/federated-bim-3rd-floor-units.jpg'
 import bimElevationEastWest from '../assets/projects/federated-bim-elevation-east-west.jpg'
 import bimElevationSouthNorth from '../assets/projects/federated-bim-elevation-south-north.jpg'
@@ -181,7 +182,7 @@ export const projects: Project[] = [
     title: 'Model Coordination & Clash Detection',
     location: 'George Brown College',
     category: 'Academic Project',
-    categories: ['Clashes', 'Report', '4D Simulation'],
+    categories: ['Disciplines', 'Report', '4D Simulation'],
     building: 'Mixed-use, 5-storey building',
     role: 'BIM Coordinator',
     software: ['Revit', 'Navisworks'],
@@ -197,28 +198,34 @@ export const projects: Project[] = [
         size: 'large',
       },
       {
-        src: clashDetail1,
-        caption: 'Clash detection: structural steel vs. equipment',
+        src: clashArchitectural,
+        caption: 'Architectural model: massing, envelope and streetscape',
         size: 'small',
-        tag: 'Clashes',
+        tag: 'Disciplines',
       },
       {
-        src: clashDetail2,
-        caption: 'Clash detection: duct routing through truss',
+        src: clashStructural,
+        caption: 'Structural model: steel frame, cores and pile foundations',
         size: 'small',
-        tag: 'Clashes',
+        tag: 'Disciplines',
       },
       {
-        src: clashDetail3,
-        caption: 'Clash detection: mechanical clearance check',
+        src: clashMechanical,
+        caption: 'Mechanical model: air handling units and duct distribution',
         size: 'small',
-        tag: 'Clashes',
+        tag: 'Disciplines',
       },
       {
-        src: clashDetail4,
-        caption: 'Clash detection: coordination issue resolved',
+        src: clashElectrical,
+        caption: 'Electrical model: cable tray, lighting and ceiling devices',
         size: 'small',
-        tag: 'Clashes',
+        tag: 'Disciplines',
+      },
+      {
+        src: clashPlumbing,
+        caption: 'Plumbing model: supply, sanitary and storm risers',
+        size: 'small',
+        tag: 'Disciplines',
       },
     ],
   },
