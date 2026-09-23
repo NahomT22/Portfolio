@@ -31,8 +31,8 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-8 max-w-xl text-lg leading-relaxed text-muted"
         >
-          I'm {profile.name}, an architect and BIM specialist working across
-          Revit, Navisworks, and Dynamo — {profile.tagline.toLowerCase()}
+          I'm {profile.name}, an architect and BIM management student working
+          across Revit, Navisworks, and Dynamo — {profile.tagline.toLowerCase()}
         </motion.p>
       </section>
 

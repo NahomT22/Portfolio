@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Nahom Haile',
-  role: 'Architect & BIM Specialist',
+  role: 'Architect & BIM Management Student',
   location: 'Toronto, ON',
   email: 'ntariku55@gmail.com',
   tagline: 'Bridging architectural design with computational workflows.',
