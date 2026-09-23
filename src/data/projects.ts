@@ -3,6 +3,10 @@ import clashElectrical from '../assets/projects/clash-detection-electrical.jpg'
 import clashHero from '../assets/projects/clash-detection-hero.jpg'
 import clashMechanical from '../assets/projects/clash-detection-mechanical.jpg'
 import clashPlumbing from '../assets/projects/clash-detection-plumbing.jpg'
+import clashReportArchStr from '../assets/projects/clash-report-arch-vs-str.png'
+import clashReportStrEle from '../assets/projects/clash-report-str-vs-ele.png'
+import clashReportStrHvac from '../assets/projects/clash-report-str-vs-hvac.png'
+import clashReportStrPlum from '../assets/projects/clash-report-str-vs-plum.png'
 import clashStructural from '../assets/projects/clash-detection-structural.jpg'
 import bim3rdFloorUnits from '../assets/projects/federated-bim-3rd-floor-units.jpg'
 import bimElevationEastWest from '../assets/projects/federated-bim-elevation-east-west.jpg'
@@ -226,6 +230,30 @@ export const projects: Project[] = [
         caption: 'Plumbing model: supply, sanitary and storm risers',
         size: 'small',
         tag: 'Disciplines',
+      },
+      {
+        src: clashReportArchStr,
+        caption: 'ARCH vs STR: model difference log, recorded by level',
+        size: 'small',
+        tag: 'Clash Detection Report',
+      },
+      {
+        src: clashReportStrHvac,
+        caption: 'STR vs HVAC: hard clash matrix, 0.0 m tolerance',
+        size: 'small',
+        tag: 'Clash Detection Report',
+      },
+      {
+        src: clashReportStrEle,
+        caption: 'STR vs ELE: hard clash matrix excluding trays, 0.05 m tolerance',
+        size: 'small',
+        tag: 'Clash Detection Report',
+      },
+      {
+        src: clashReportStrPlum,
+        caption: 'STR vs PLUM: hard clash matrix, 0.0 m tolerance',
+        size: 'small',
+        tag: 'Clash Detection Report',
       },
     ],
   },
